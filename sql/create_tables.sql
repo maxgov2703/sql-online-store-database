@@ -89,3 +89,15 @@ CREATE TABLE payments (
         REFERENCES orders(order_id)
         ON DELETE CASCADE
 );
+-- Indexes for Performance
+CREATE INDEX idx_orders_customer 
+ON orders(customer_id);
+--
+CREATE INDEX idx_orders_date 
+ON orders(order_date);
+--
+CREATE INDEX idx_order_items_product 
+ON order_items(product_id);
+--
+CREATE INDEX idx_payments_order 
+ON payments(order_id);
