@@ -101,3 +101,12 @@ ON order_items(product_id);
 --
 CREATE INDEX idx_payments_order 
 ON payments(order_id);
+-- Analytical Views
+CREATE VIEW monthly_revenue AS
+SELECT 
+    DATE_TRUNC('month', order_date) AS month,
+    SUM(total_amount) AS revenue
+FROM orders
+WHERE status = 'paid'
+GROUP BY DATE_TRUNC('month', order_date)
+ORDER BY month;
