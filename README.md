@@ -43,6 +43,19 @@ The database includes indexes to improve query performance:
 - Index on `order_items(product_id)` for product sales analysis  
 - Index on `payments(order_id)` for payment tracking  
 
+### Analytical Layer (VIEW)
+
+The project includes an analytical view:
+
+`monthly_revenue`
+
+This view aggregates paid orders by month and provides a ready-to-use dataset for business reporting.
+
+Example usage:
+
+```sql
+SELECT * FROM monthly_revenue;
+```
 Indexes ensure efficient execution of analytical queries on large datasets.
 ---
 ## Example Analytics
