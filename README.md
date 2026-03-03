@@ -34,6 +34,16 @@ The project demonstrates:
 - UNIQUE constraints for emails and product-order pairs
 - Composite primary key for many-to-many relationship
 
+### Performance Optimization
+
+The database includes indexes to improve query performance:
+
+- Index on `orders(customer_id)` for fast customer order lookup  
+- Index on `orders(order_date)` for time-based analytics  
+- Index on `order_items(product_id)` for product sales analysis  
+- Index on `payments(order_id)` for payment tracking  
+
+Indexes ensure efficient execution of analytical queries on large datasets.
 ---
 ## Example Analytics
 
