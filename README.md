@@ -82,6 +82,7 @@ These queries illustrate how the database can be used for real-world business an
 
 ## How to Run
 
-1. Create a PostgreSQL database
-2. Execute `create_tables.sql`
-3. Run analytical queries from `sample_queries.sql`
+1. Create a PostgreSQL database  
+2. Execute `create_tables.sql`  
+3. Execute `seed_data.sql`  
+4. Run analytical queries from `sample_queries.sql`
